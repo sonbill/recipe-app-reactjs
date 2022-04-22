@@ -25,8 +25,8 @@ function Veggie() {
   }
   return (
     <div>
-      <div className="my-3">
-        <h3 className="font-bold">Our vegetarian picks</h3>
+      <div className="my-3 space-y-5">
+        <h3 className="font-bold text-xl">Our vegetarian picks</h3>
         <Splide options={{
           perPage: 3,
           arrows: false,

@@ -27,7 +27,7 @@ function Cuisine() {
   }, [params.type])
 
   return (
-    <div className="grid grid-cols-4 gap-10">
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-10">
       {cuisine.map((item) => {
         return (
           <div key={item.id} className="space-y-3">

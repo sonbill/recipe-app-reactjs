@@ -29,8 +29,8 @@ function Popular() {
   }
   return (
     <div>
-      <div className="my-3">
-        <h3 className="font-bold">Popular picks</h3>
+      <div className="my-3 space-y-5">
+        <h3 className="font-bold text-xl">Popular picks</h3>
         <Splide options={{
           perPage: 4,
           arrows: false,
