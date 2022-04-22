@@ -7,20 +7,20 @@ function Cuisine() {
   let params = useParams();
 
   const getCuisine = async (name) => {
-    const check = localStorage.getItem('popular');
-    if (check) {
-      setCuisine(JSON.parse(check));
-    } else {
-      const api = await fetch(`https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=10`);
-      const data = await api.json();
+    // const check = localStorage.getItem('popular');
+    // if (check) {
+    //   setCuisine(JSON.parse(check));
+    // } else {
+    //   const api = await fetch(`https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=10`);
+    //   const data = await api.json();
 
-      localStorage.setItem('popular', JSON.stringify(data.recipes));
-      console.log(data.recipes)
-      setCuisine(data.recipes)
-    }
-    // const data = await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_API_KEY}&cuisine=${name}`);
-    // const recipes = await data.json();
-    // setCuisine(recipes.results);
+    //   localStorage.setItem('popular', JSON.stringify(data.recipes));
+    //   console.log(data.recipes)
+    //   setCuisine(data.recipes)
+    // }
+    const data = await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_API_KEY}&cuisine=${name}`);
+    const recipes = await data.json();
+    setCuisine(recipes.results);
   }
   useEffect(() => {
     getCuisine(params.type);
