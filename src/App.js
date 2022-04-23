@@ -7,9 +7,13 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <Search />
-        <Category />
-        <Pages />
+        <div className="mx-[3%] md:mx-[10%] max-w-[90%]">
+          <div className="mx-0 md:mx-[20%]">
+            <Search />
+          </div>
+          <Category />
+          <Pages />
+        </div>
       </BrowserRouter>
     </div>
   );

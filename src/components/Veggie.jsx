@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css';
+import { Link } from 'react-router-dom';
+
 
 
 function Veggie() {
@@ -38,9 +40,11 @@ function Veggie() {
             return (
               <SplideSlide key={recipe.id}>
                 <div className="overflow-hidden rounded min-h-7 relative">
-                  <div className="absolute bg-gradient-to-t from-[#1B1A17] w-full h-full"></div>
-                  <img src={recipe.image} alt={recipe.title} className="w-full h-full rounded object-cover" />
-                  <p className="z-5 absolute left-[50%] bottom-0 translate-x-[-50%] translate-y-0 text-white w-full text-center font-bold h-[40%] flex justify-center items-center">{recipe.title}</p>
+                  <Link to={"/recipe/" + recipe.id}>
+                    <div className="absolute bg-gradient-to-t from-[#1B1A17] w-full h-full"></div>
+                    <img src={recipe.image} alt={recipe.title} className="w-full h-full rounded object-cover" />
+                    <p className="z-5 absolute left-[50%] bottom-0 translate-x-[-50%] translate-y-0 text-white w-full text-center font-bold h-[40%] flex justify-center items-center">{recipe.title}</p>
+                  </Link>
                 </div>
               </SplideSlide>
             );
