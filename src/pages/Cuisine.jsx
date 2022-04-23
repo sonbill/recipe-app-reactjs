@@ -31,8 +31,10 @@ function Cuisine() {
       {cuisine.map((item) => {
         return (
           <div key={item.id} className="space-y-3">
-            <img src={item.image} alt={item.image} className="rounded object-cover" />
-            <h4 className="font-bold">{item.title}</h4>
+            <Link to={'/recipe/' + item.id} >
+              <img src={item.image} alt={item.image} className="rounded object-cover" />
+              <h4 className="font-bold">{item.title}</h4>
+            </Link>
           </div>
         );
       })}
