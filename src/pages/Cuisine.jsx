@@ -27,7 +27,13 @@ function Cuisine() {
   }, [params.type])
 
   return (
-    <div className="grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-10">
+    <motion.div
+      className="grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-10"
+      animate={{ opacity: 1 }}
+      initial={{ opacity: 0 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.5 }}
+    >
       {cuisine.map((item) => {
         return (
           <div key={item.id} className="space-y-3">
@@ -38,7 +44,7 @@ function Cuisine() {
           </div>
         );
       })}
-    </div>
+    </motion.div>
   )
 }
 

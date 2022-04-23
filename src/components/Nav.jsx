@@ -7,7 +7,7 @@ function Nav() {
     <div>
       <Link to={'/'}>
         <div className="flex items-center space-x-3 text-3xl">
-          <p className="font-bold font-serif">Son Cook</p>
+          <p className="font-bold font-serif">Son Recipe</p>
           <FaCookieBite />
         </div>
       </Link>
